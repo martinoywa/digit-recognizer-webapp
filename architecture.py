@@ -13,7 +13,7 @@ from PIL import Image
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        # linear layer (784 -> 1 hidden node)
+        
         self.fc1 = nn.Linear(28 * 28, 512)
         self.fc2 = nn.Linear(512, 512)
         self.fc3 = nn.Linear(512, 10)
@@ -35,10 +35,14 @@ def get_model():
     model = Net()
     model.load_state_dict(torch.load(chechpoint, map_location='cpu'), strict=False)
     model.eval()
-    
+
     return model
 
 def get_tensor(image_bytes):
     """Returns transformed image."""
-    return ''
+    transform = transforms.Compose([transforms.Resize((28,28)),
+                                    transforms.ToTensor()])
+    image = Image.open(io.BytesIO(image_bytes)) # image_bytes are what we get from web request
+    
+    return transform(image).unsqueeze(0)
 
