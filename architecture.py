@@ -20,8 +20,9 @@ class Net(nn.Module):
         self.pool = nn.MaxPool2d(2, 2)
         # fully connected layers
         self.fc1 = nn.Linear(64 * 7 * 7, 512)
-        self.fc2 = nn.Linear(512, 64)
-        self.fc3 = nn.Linear(64, 10)
+        self.fc2 = nn.Linear(512, 256)
+        self.fc3 = nn.Linear(256, 64)
+        self.fc4 = nn.Linear(64, 10)
         # dropout
         self.dropout = nn.Dropout(p=.5)
 
@@ -34,7 +35,8 @@ class Net(nn.Module):
         # add hidden layer, with relu activation function
         x = self.dropout(F.relu(self.fc1(x)))
         x = self.dropout(F.relu(self.fc2(x)))
-        x = F.log_softmax(self.fc3(x), dim=1)
+        x = self.dropout(F.relu(self.fc3(x)))
+        x = F.log_softmax(self.fc4(x), dim=1)
         
         return x
 
@@ -52,7 +54,7 @@ def get_tensor(image_bytes):
     """Returns transformed image."""
     transform = transforms.Compose([transforms.Resize((28,28)),
                                     transforms.ToTensor()])
-    image = Image.open(io.BytesIO(image_bytes)) # image_bytes are what we get from web request
-    
+    image = Image.open(io.BytesIO(image_bytes)).convert('L') # image_bytes are what we get from web request then grays the image
+
     return transform(image).unsqueeze(0) # sends a single image
 
