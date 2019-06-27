@@ -43,7 +43,7 @@ class Net(nn.Module):
 
 def get_model():
     """Returns loaded model."""
-    chechpoint = '/home/martineliteai/flask/digit_recognizer_deployed/model.pt'
+    chechpoint = '../model.pt'
     model = Net()
     model.load_state_dict(torch.load(chechpoint, map_location='cpu'), strict=False)
     model.eval()
