@@ -16,7 +16,7 @@
 
 > Test Accuracy of 5: <b> 99% </b>
 
-> Test Accuracy of 6: <b> 98% <br />
+> Test Accuracy of 6: <b> 98% </b>
 
 > Test Accuracy of 7: <b> 98% </b>
 
