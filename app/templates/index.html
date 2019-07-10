@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digit Recognizer</title>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Upload Digit Image</h1>
+    <form method=POST enctype=multipart/form-data>
+        <input type="file" name="image_file">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
