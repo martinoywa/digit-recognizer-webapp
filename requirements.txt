@@ -1,9 +1,10 @@
 Click==7.0
 Flask==1.0.3
+Flask-SocketIO==4.0.0
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
-Werkzeug==0.15.4
-torch==1.1.0              
+http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
 torchvision==0.2.2.post3
+Werkzeug==0.15.4
