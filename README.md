@@ -3,6 +3,9 @@
 
 >Only works for digits from 0 - 9.
 
+# run locally
+python3 run.py
+
 # model's accuracy on each digit
 > Test Accuracy of 0: <b> 99% </b>
 
