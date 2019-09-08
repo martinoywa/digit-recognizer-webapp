@@ -29,13 +29,13 @@
 
 # home page and predictions page
 > Upload Image Page <br />
-![upload page](images/upload_image.png)
+![upload page](images/index.png)
 
 > Uploaded Image <br />
-![uploaded image](images/pay-3208060__340.png)
+![uploaded image](images/3.jpeg)
 
 > Predicted Label <br />
-![sample prediction](images/sample_prediction.png)
+![sample prediction](images/predict.png)
 
 # unique files in the project
 > architecture.py <br />
