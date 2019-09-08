@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <title>Digit Recognizer</title>
-    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Prediction</h1>
-    <p>Perdicted Label: {{ label }}</p>
+    <div class="jumbotron">
+        <h1 class="display-4">Digit Classifier</h1>
+        <p class="lead">Flask web application for deploying a digit classifier model built using PyTorch.</p>
+        <hr class="my-4">
+        <h1>Prediction</h1>
+    </div>
+    <div class="container">
+        <p>Perdicted Label: {{ label }}</p>
+    </div>
 </body>
 </html>
