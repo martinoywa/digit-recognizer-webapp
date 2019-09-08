@@ -1,10 +1,11 @@
-# digit recognizer webapp
-> Flask web application for deploying a digit recognizer model built using <br /> PyTorch. <br />
+# digit classifier web application
+> Flask web application for deploying a digit classifier model built using <br /> PyTorch. <br />
 
 >Only works for digits from 0 - 9.
 
 # run locally
-> $python3 run.py
+>$ pip3 install -r requirements.txt <br />
+>$ python3 run.py
 
 # model's accuracy on each digit
 > Test Accuracy of 0: <b> 99% </b>
